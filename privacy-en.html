@@ -21,13 +21,14 @@
 
   <main>
     <h1>Privacy Policy for Warranty</h1>
-    <p><small>Last updated: August 19, 2026 · Version 1.6.2</small></p>
+    <p><small>Last updated: August 22, 2026 · Version 1.6.3 (Build 14)</small></p>
 
     <section class="summary" aria-labelledby="summary">
       <h2 id="summary">Summary</h2>
       <ul>
         <li>No advertising, tracking, analytics SDKs, or Warranty user account.</li>
         <li>Receipts, documents, and product photos stay on the device by default.</li>
+        <li>The live warranty lookup sends only limited product metadata to Warranty's Cloudflare service, never receipts or serial numbers.</li>
         <li>iCloud is used only if you enable it.</li>
         <li>Warranty does not sell or rent personal information.</li>
       </ul>
@@ -45,21 +46,26 @@
     <p>At your request, Warranty processes receipt images, PDFs, product photos you take or select, recognized text, product and retailer names, prices, purchase dates, invoice and serial numbers, warranty information, notes, and warranty cases. The content comes from your entries and from camera, photo, or file imports you expressly select. It is stored in protected app storage on the device by default and is not sent to a server operated by the publisher.</p>
 
     <h3>3.2 Apple Intelligence</h3>
-    <p>On supported devices, Warranty uses Apple Foundation Models to structure receipt information and provide unverified warranty assessments and warranty-assistant answers. Warranty does not connect a publisher-operated or freely configurable external AI service for these features. Use and availability of the Apple system model depend on your device, iOS configuration, and Apple's terms.</p>
+    <p>On supported devices, Warranty uses Apple Foundation Models to structure receipt information, explain warranty information, provide fallback assessments, and answer warranty-assistant questions. Receipt content and prompts are not sent to a publisher-operated AI service. Use and availability of the Apple system model depend on your device, iOS configuration, and Apple's terms.</p>
 
-    <h3>3.3 Optional iCloud</h3>
+    <h3>3.3 Live manufacturer-warranty lookup</h3>
+    <p>When Warranty researches a product's manufacturer warranty, the app sends the manufacturer, product name, model, product category, purchase-country code, and current device-region country code to a service operated by the publisher on Cloudflare. It does not send receipt images, PDFs, recognized receipt text, prices, purchase dates, invoice numbers, serial numbers, IMEIs, EANs, or contact information. The service returns a reviewed warranty rule together with an official manufacturer source and review date. If no reviewed match is available or the service cannot be reached, the app may use a clearly labeled on-device estimate instead.</p>
+    <p>The publisher does not use these requests for advertising or profiling and does not create application records containing the request body. Request-content logging is disabled; only aggregated operational metrics are used to monitor availability. Cloudflare necessarily processes the IP address and technical request metadata to deliver, rate-limit, and protect the service. Cloudflare acts as infrastructure provider and processor under the applicable data-protection terms.</p>
+
+    <h3>3.4 Optional iCloud</h3>
     <p>If you enable iCloud in Warranty, Apple syncs app data through the private iCloud area of the Apple Account in use. The publisher does not operate a separate sync server. You can disable the feature; data already synced is also governed by Apple and iCloud settings.</p>
 
-    <h3>3.4 App Store purchase</h3>
+    <h3>3.5 App Store purchase</h3>
     <p>The lifetime Pro purchase is handled by Apple through StoreKit and the App Store. Warranty receives transaction and entitlement information supplied by Apple, in particular whether the entitlement is valid. The publisher does not receive complete payment or credit-card details.</p>
 
-    <h3>3.5 Support</h3>
+    <h3>3.6 Support</h3>
     <p>If you voluntarily contact support, we process your email address, technical information, message content, and any attachment you choose to send. Do not send complete receipts, serial numbers, or confidential documents unless they are expressly required to handle the request.</p>
 
     <h2>4. Purposes and legal bases</h2>
     <p>To the extent processing is legally attributable to the publisher, it is carried out for these purposes:</p>
     <ul>
       <li>Providing the app, local document management, and the Pro entitlement to perform a contract or take steps at your request before entering one (Article 6(1)(b) GDPR or corresponding laws).</li>
+      <li>Looking up reviewed manufacturer-warranty facts using limited product metadata to provide the requested warranty feature (Article 6(1)(b) GDPR) and securing the service against misuse (Article 6(1)(f) GDPR).</li>
       <li>Optional features such as iCloud, camera, photos, files, notifications, and Face ID at your express request and with the relevant system permission (Article 6(1)(a) or (b) GDPR where applicable).</li>
       <li>Handling support requests to perform the contract and for the legitimate interest in secure and reliable support and troubleshooting (Article 6(1)(b) and (f) GDPR).</li>
       <li>Meeting legal duties and establishing, exercising, or defending legal claims (Article 6(1)(c) and (f) GDPR).</li>
@@ -67,14 +73,14 @@
     <p>You may withdraw consent for the future. System permissions can be changed in iOS. Withdrawal does not affect processing that was lawful before withdrawal.</p>
 
     <h2>5. Recipients, service providers, and sale of data</h2>
-    <p>Warranty uses Apple for App Store distribution, StoreKit, optional iCloud, and Apple system features. Support emails are transmitted and stored through technical email providers. Providers may process information only for the relevant purpose and under applicable privacy requirements.</p>
+    <p>Warranty uses Apple for App Store distribution, StoreKit, optional iCloud, and Apple system features. Cloudflare acts as processor and provides the network and security infrastructure for the live manufacturer-warranty lookup. The relevant safeguards include Cloudflare's <a href="https://www.cloudflare.com/en-gb/cloudflare-customer-dpa/" rel="external">Data Processing Addendum</a> and its incorporated technical and organizational measures; Cloudflare publishes its current <a href="https://www.cloudflare.com/gdpr/subprocessors/" rel="external">subprocessor list</a>. Support emails are transmitted and stored through technical email providers. Providers may process information only for the relevant purpose and under applicable privacy requirements.</p>
     <p>There are no advertising networks, data brokers, or analytics providers. Warranty does not sell or rent personal information and does not share it for behavioral or cross-context advertising.</p>
 
     <h2>6. Processing outside your country</h2>
-    <p>The publisher does not send app content to a publisher-operated server. When you use Apple services or communicate by email across borders, information may be processed outside your country, the EU/EEA, the United Kingdom, Switzerland, Canada, Australia, or New Zealand. Apple describes locations and safeguards in its <a href="https://www.apple.com/legal/privacy/" rel="external">privacy information</a>. Where the publisher initiates an international transfer and is legally responsible, required adequacy decisions, contractual clauses, or other recognized safeguards will be used.</p>
+    <p>The limited product metadata described in section 3.3 is transmitted through Cloudflare's international network. Apple services and email communication may also involve processing outside your country, the EU/EEA, the United Kingdom, Switzerland, Canada, Australia, or New Zealand. Apple and Cloudflare describe their locations and safeguards in their privacy information. Where required for Cloudflare, the Data Privacy Framework and the EU Standard Contractual Clauses incorporated into its Data Processing Addendum apply together with the supplementary safeguards described there. Where the publisher initiates an international transfer and is legally responsible, the required adequacy decision, contractual clauses, or other recognized safeguards will be used.</p>
 
     <h2>7. Whether information is required</h2>
-    <p>Providing product data and permitting camera, photos, files, notifications, Face ID, or iCloud is voluntary. Without an item or permission, only the feature that depends on it is unavailable or limited. Manual entry remains available where possible. A valid App Store transaction is required for the Pro entitlement. A support request cannot be answered without contact information.</p>
+    <p>Providing product data and permitting camera, photos, files, notifications, Face ID, or iCloud is voluntary. The limited live lookup is part of researching a manufacturer warranty; without a network connection or reviewed match, the app uses its labeled local fallback where available. Manual entry remains available. A valid App Store transaction is required for the Pro entitlement. A support request cannot be answered without contact information.</p>
 
     <h2>8. Retention and deletion</h2>
     <ul>
@@ -83,6 +89,7 @@
       <li>If iCloud is enabled, deletion syncs through Apple; additional backups and time limits are governed by Apple's services and settings.</li>
       <li>Support correspondence is ordinarily deleted no later than twelve months after the request is closed, unless legal retention duties or claims require longer storage.</li>
       <li>Apple retains purchase and transaction data under its rules. Warranty keeps only information needed to check the entitlement.</li>
+      <li>The live lookup creates no publisher-side application records containing request bodies; request content is used only to answer the request in real time and is then discarded. Cloudflare may retain limited security and network metadata under its Data Processing Addendum, service settings, and legal obligations.</li>
     </ul>
 
     <h2>9. Security</h2>
